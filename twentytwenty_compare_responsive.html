@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>До / После</title>
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+    .twentytwenty-container {
+      max-width: 460px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="twentytwenty-container">
+    <img src="before_500px.png" alt="До">
+    <img src="after_500px.png" alt="После">
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.min.js"></script>
+
+  <script>
+    $(window).on('load', function(){
+      $('.twentytwenty-container').twentytwenty({
+        default_offset_pct: 0.5,
+        orientation: 'horizontal',
+        no_overlay: true
+      });
+    });
+  </script>
+</body>
+</html>
