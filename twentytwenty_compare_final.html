@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>До / После</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twentytwenty/css/twentytwenty.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+    .twentytwenty-container {
+      max-width: 460px;
+      margin: 0 auto;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="twentytwenty-container">
+    <img src="before_500px.png" alt="До">
+    <img src="after_500px.png" alt="После">
+  </div>
+
+  <!-- Подключение jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Подключение зависимостей плагина -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-event-move"></script>
+  <script src="https://cdn.jsdelivr.net/npm/twentytwenty/js/jquery.twentytwenty.js"></script>
+
+  <script>
+    $(function(){
+      $(".twentytwenty-container").twentytwenty({
+        default_offset_pct: 0.5,
+        orientation: 'horizontal',
+        no_overlay: true
+      });
+    });
+  </script>
+</body>
+</html>
