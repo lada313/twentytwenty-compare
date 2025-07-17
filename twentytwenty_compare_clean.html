@@ -3,39 +3,41 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Сравнение до/после</title>
-  <link rel="stylesheet" href="https://s-sd.ru/files/twentytwenty/css/twentytwenty.css">
+  <title>Сравнение До и После</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/twentytwenty/css/twentytwenty.css">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: none;
+      background: transparent;
     }
-
     .twentytwenty-container {
-      max-width: 100%;
+      max-width: 460px;
       margin: 0 auto;
-      border: none;
     }
-
-    .twentytwenty-overlay {
-      display: none !important; /* скрываем надписи 'до' и 'после' */
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
 </head>
 <body>
-
   <div class="twentytwenty-container">
-    <img src="before.png" alt="Before">
-    <img src="after.png" alt="After">
+    <img src="before.png" alt="До">
+    <img src="after.png" alt="После">
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://s-sd.ru/files/twentytwenty/js/jquery.event.move.js"></script>
-  <script src="https://s-sd.ru/files/twentytwenty/js/jquery.twentytwenty.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-event-move"></script>
+  <script src="https://cdn.jsdelivr.net/npm/twentytwenty/js/jquery.twentytwenty.js"></script>
   <script>
     $(function(){
-      $(".twentytwenty-container").twentytwenty();
+      $(".twentytwenty-container").twentytwenty({
+        default_offset_pct: 0.5,
+        orientation: 'horizontal',
+        no_overlay: true
+      });
     });
   </script>
 </body>
